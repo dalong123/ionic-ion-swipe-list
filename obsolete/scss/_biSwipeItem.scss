@@ -1,0 +1,28 @@
+/**
+ * The hidden right-side buttons that can be exposed under a list item
+ * with dragging.
+ */
+.item-options-left, .item-options-right {
+    position: absolute;
+    top: 0;
+    z-index: $z-index-item-options;
+    height: 100%;
+    .button {
+        height: 100%;
+        border: none;
+        border-radius: 0;
+        @include display-inline-flex;
+        @include align-items(center);
+        &:before {
+            margin: 0 auto;
+        }
+    }
+}
+
+.item-options-left {
+    left: 0;
+}
+
+.item-options-right {
+    right: 0;
+}
